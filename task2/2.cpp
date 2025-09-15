@@ -14,7 +14,10 @@ void DFS(int v, const std::vector<std::vector<int>>& graph, std::vector<bool>& v
 int main() {
   int n = 0;
   int m = 0;
+
+  std::cout << "Введите число узлов сети (N) и рёбер (M):";
   std::cin >> n >> m;  // читаем число узлов и рёбер
+  std::cout << "Введите рёбра:";
 
   std::vector<std::vector<int>> graph(n); // список смежности
   for (int i = 0; i < m; ++i) {
@@ -37,6 +40,6 @@ int main() {
     }
   }
 
-  std::cout << (components - 1) << std::endl; // нужно добавить (k - 1) рёбер
+  std::cout << "Число необходимых связей: " << (components - 1) << std::endl; // нужно добавить (k - 1) рёбер
   return 0;
 }
